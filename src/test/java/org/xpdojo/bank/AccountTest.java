@@ -31,5 +31,15 @@ public class AccountTest {
 
     }
 
+    @Test
+    public void BalanceDecreasesWithWithrawal() {
+        Account account = new Account();
+        account.deposit(50);
+        account.withdraw(40);
+        assertThat(account.balance).isEqualTo(10);
+
+
+    }
+
 
 }
