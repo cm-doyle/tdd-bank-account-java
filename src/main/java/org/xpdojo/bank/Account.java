@@ -3,7 +3,6 @@ package org.xpdojo.bank;
 public class Account {
     public int balance;
     public int currentBalance;
-    public int newBalance;
 
     public void deposit(int i) {
         // int initialises to zero, Integer initialises to null
