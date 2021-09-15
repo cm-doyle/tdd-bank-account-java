@@ -5,7 +5,7 @@ public class Account {
 
     public void deposit(int i) {
         // int initialises to zero, Integer initialises to null
-        balance = i;
+        balance += i;
 
 
     }

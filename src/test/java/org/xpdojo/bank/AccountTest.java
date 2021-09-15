@@ -22,7 +22,14 @@ public class AccountTest {
 
     }
 
+    @Test
+    public void BalanceIncreasesWithMultipleDeposits() {
+        Account account = new Account();
+        account.deposit(40);
+        account.deposit(50);
+        assertThat(account.balance).isEqualTo(90);
 
+    }
 
 
 }
