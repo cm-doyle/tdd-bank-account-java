@@ -2,8 +2,7 @@ package org.xpdojo.bank;
 
 public class Account {
     public int balance;
-    public int currentBalance;
-
+    
     public void deposit(int i) {
         // int initialises to zero, Integer initialises to null
         balance += i;
@@ -12,8 +11,8 @@ public class Account {
     }
 
     public void withdraw(int i) {
-        currentBalance = balance;
-        balance = currentBalance - i;
+
+        balance -= i;
 
     }
 
