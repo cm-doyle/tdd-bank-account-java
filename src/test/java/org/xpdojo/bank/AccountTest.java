@@ -41,5 +41,32 @@ public class AccountTest {
 
     }
 
+    @Test
+    // Would need to check with business if Overdrafts are allowed
+    // If so, there's probably a limit
+   public void OverdrawnBalanceShowsAsNegative() {
+        Account account = new Account();
+        account.deposit(50);
+        account.withdraw(60);
+        assertThat(account.balance).isEqualTo(-10);
+
+    }
+
+    @Test
+    public void testPrinting() {
+        String output = "";
+
+        new Account().print(new Output() {
+            @Override
+            public void print() {
+                output = 'hello';
+        }
+
+
+    });
+    assertThat(output).is('hello');
+
+
+
 
 }
